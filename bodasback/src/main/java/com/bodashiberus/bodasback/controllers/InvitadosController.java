@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class InvitadosController {
     
     @PostMapping
-    public void insertar(MensajeInfo mensaje){
-        System.out.println("Nuevo invitado " + mensaje.getData());
+    public void insertar(InvitadoDto invitado){
+        System.out.println("Nuevo invitado " + invitado);
     }
     
 }

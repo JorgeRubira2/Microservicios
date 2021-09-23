@@ -2,6 +2,7 @@ package com.bodashiberus.bodasback.mensajeria;
 
 import com.bodashiberus.bodasback.config.RabbitConfig;
 import com.bodashiberus.bodasback.dto.InvitadoDto;
+import com.bodashiberus.bodasback.dto.MensajeInfo;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
@@ -9,8 +10,8 @@ import org.springframework.stereotype.Component;
 public class InvitacionesListener {
     
     @RabbitListener(queues = RabbitConfig.QUEUE)
-    public void recibirInvitaciones(InvitadoDto invitado){
-        System.out.println("Recibido mensaje " + invitado);
+    public void recibirInvitaciones(MensajeInfo mensaje){
+        System.out.println("Recibido mensaje " + mensaje);
     }
     
 }
